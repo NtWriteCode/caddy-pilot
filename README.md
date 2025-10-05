@@ -15,7 +15,8 @@ A custom Caddy server with useful modules pre-installed. Built weekly with the l
 docker run -d \
   -p 80:80 \
   -p 443:443 \
-  -v $(pwd)/Caddyfile:/etc/caddy/Caddyfile:ro \
+  -p 443:443/udp \
+  -v $(pwd)/Caddyfile:/etc/caddy/Caddyfile \
   -v caddy_data:/data \
   ghcr.io/ntwritecode/caddy-pilot:latest
 ```
@@ -32,8 +33,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "443:443/udp"  # HTTP/3
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
 
@@ -49,6 +51,8 @@ example.com {
     reverse_proxy backend:8080
 }
 ```
+
+> **Note:** When reverse proxying to other containers, use the container name (e.g. `backend:8080`), not `localhost`. In Docker, `localhost` means "this container", not "this machine".
 
 Start it:
 ```bash
