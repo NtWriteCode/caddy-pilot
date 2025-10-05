@@ -15,7 +15,7 @@ on:
       - master
     paths:
       - 'Dockerfile'
-      - 'modules.json'
+      - 'modules.txt'
       - '.github/workflows/build.yml'
 
 env:

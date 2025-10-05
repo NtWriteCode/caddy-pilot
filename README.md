@@ -6,6 +6,7 @@ A custom Caddy server with useful modules pre-installed. Built weekly with the l
 
 - **[caddy-security](https://github.com/greenpau/caddy-security)** - Authentication, authorization, and accounting
 - **[caddy-dns/desec](https://github.com/caddy-dns/desec)** - deSEC DNS provider for ACME DNS challenges
+- **[caddy-dynamicdns](https://github.com/mholt/caddy-dynamicdns)** - Dynamic DNS updater
 
 ## 🚀 Using This Image
 
@@ -69,16 +70,12 @@ Click the **Fork** button on GitHub.
 
 ### 2. Edit Modules
 
-Update `modules.json` with your desired modules:
+Update `modules.txt` with your desired modules (one per line):
 
-```json
-{
-  "modules": [
-    "github.com/caddy-dns/cloudflare",
-    "github.com/mholt/caddy-l4",
-    "github.com/greenpau/caddy-security"
-  ]
-}
+```
+github.com/caddy-dns/cloudflare
+github.com/mholt/caddy-l4
+github.com/greenpau/caddy-security
 ```
 
 Find modules at:
