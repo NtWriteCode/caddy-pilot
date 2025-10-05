@@ -65,11 +65,7 @@ Want different modules? Fork this repository and customize it:
 
 ### 1. Fork the Repository
 
-Click the **Fork** button on GitHub or:
-```bash
-git clone https://github.com/NtWriteCode/caddy-pilot.git
-cd caddy-pilot
-```
+Click the **Fork** button on GitHub.
 
 ### 2. Edit Modules
 
