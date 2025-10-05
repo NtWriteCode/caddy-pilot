@@ -1,0 +1,22 @@
+# Caddy data
+data/
+config/
+
+# Docker volumes
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+

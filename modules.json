@@ -1,0 +1,7 @@
+{
+  "modules": [
+    "github.com/greenpau/caddy-security",
+    "github.com/caddy-dns/desec"
+  ]
+}
+

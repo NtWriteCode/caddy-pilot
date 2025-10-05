@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  caddy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: caddy-custom
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "2019:2019"  # Admin API
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      - CADDY_ADMIN=0.0.0.0:2019
+    networks:
+      - caddy_network
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  caddy_network:
+    driver: bridge
+

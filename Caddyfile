@@ -1,0 +1,16 @@
+{
+	# Global options
+	admin :2019
+	auto_https off
+}
+
+# Default site
+:80 {
+	respond "Hello from Custom Caddy! 🎉" 200
+}
+
+# Example reverse proxy configuration (commented out)
+# example.com {
+#     reverse_proxy localhost:8080
+# }
+
