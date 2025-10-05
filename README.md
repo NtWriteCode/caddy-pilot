@@ -101,7 +101,18 @@ ghcr.io/your-username/caddy-pilot:latest
 The workflow runs weekly (Sundays at 3 AM UTC) to rebuild with:
 - Latest Caddy version
 - Latest module versions
-- Multi-architecture support (AMD64 & ARM64)
+- AMD64 architecture (optimized for fast builds)
+
+#### 🚀 Build Performance
+
+Builds are **AMD64-only** for faster build times. If you need ARM64 support:
+
+Edit `.github/workflows/build.yml` line 66:
+```yaml
+platforms: linux/amd64,linux/arm64
+```
+
+**Note:** Multi-arch builds take ~2-3x longer due to cross-compilation.
 
 ## 📚 Resources
 
