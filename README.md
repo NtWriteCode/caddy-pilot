@@ -2,12 +2,6 @@
 
 A custom Caddy server with useful modules pre-installed. Built weekly with the latest Caddy and module versions.
 
-## 🎯 Included Modules
-
-- **[caddy-security](https://github.com/greenpau/caddy-security)** - Authentication, authorization, and accounting
-- **[caddy-dns/desec](https://github.com/caddy-dns/desec)** - deSEC DNS provider for ACME DNS challenges
-- **[caddy-dynamicdns](https://github.com/mholt/caddy-dynamicdns)** - Dynamic DNS updater
-
 ## 🚀 Using This Image
 
 ### Quick Start with Docker

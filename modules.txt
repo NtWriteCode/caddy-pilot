@@ -1,3 +1,4 @@
-github.com/greenpau/caddy-security
 github.com/caddy-dns/desec
 github.com/mholt/caddy-dynamicdns
+github.com/corazawaf/coraza-caddy/v2
+github.com/corazawaf/coraza-geoip
