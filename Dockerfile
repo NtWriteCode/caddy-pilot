@@ -12,5 +12,7 @@ RUN --mount=type=cache,target=/go/pkg/mod \
 # Final stage: use the official Caddy image as base
 FROM caddy:2
 
+RUN mkdir -p /usr/share/GeoIP && wget https://github.com/P3TERX/GeoLite.mmdb/releases/latest/download/GeoLite2-Country.mmdb -O /usr/share/GeoIP/GeoLite2-Country.mmdb
+
 # Copy the custom-built Caddy binary
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
