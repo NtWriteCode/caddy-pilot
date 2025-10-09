@@ -1,4 +1,4 @@
 github.com/caddy-dns/desec
 github.com/mholt/caddy-dynamicdns
-github.com/corazawaf/coraza-caddy/v2
 github.com/porech/caddy-maxmind-geolocation
+github.com/greenpau/caddy-security
